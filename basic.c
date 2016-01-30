@@ -2,6 +2,7 @@
 # include <stdlib.h>
 
 char * open_file(); 
+void call(char * name); // makes a call to contact with `name`
 
 /*-----------------------------*/
 int main() {
@@ -14,6 +15,16 @@ int main() {
 	return 0;
 }
 /*-----------------------------*/
+
+
+
+
+void call(char * name) {
+	bool contactExists = contactExists(name);
+	if contactExists {
+		// code goes here
+	}
+}
 
 
 char * open_file(int argc, char *argv[1]) {
