@@ -2,30 +2,27 @@
 # include <stdlib.h>
 
 char * open_file(); 
-void call(char * name); // makes a call to contact with `name`
-
-/*-----------------------------*/
+//void call(char * name); // makes a call to contact with `name`
+int lex(char * file_contents);
+/*-----------------------------------*/
 int main() {
-	char *p;
 
+	char *p;
 	p = open_file();
-	for (int i = 0; i < 32; i++)
-		printf("%c", p[i]);
-	printf("\n");
+	lex(p);
+	
 	return 0;
 }
-/*-----------------------------*/
+/*-----------------------------------*/
 
-
-
-
-void call(char * name) {
-	bool contactExists = contactExists(name);
-	if contactExists {
-		// code goes here
+// check syntax
+int lex(char *file_contents) { 
+	for (int i = 0; i < 32; i++) {
+		printf("%c", file_contents[i]);
 	}
-}
-
+	printf("\n");
+	return 0;
+} 
 
 char * open_file(int argc, char *argv[1]) {
 	FILE *fp = fopen(argv[1], "r");
@@ -45,7 +42,7 @@ char * open_file(int argc, char *argv[1]) {
 	
 	return data;
 		
-} 
+}
 
 
 
