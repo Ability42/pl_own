@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-char * open_file(); // func. prototype
+char * open_file(); 
 
 /*-----------------------------*/
 int main() {
